@@ -116,7 +116,7 @@ namespace AC_MENU
             rect.Y = head.Y;
 
             rect.Width = (feet.Y - head.Y) / 2;
-            rect.Width = feet.Y - head.Y;
+            rect.Height = feet.Y - head.Y;
 
             return rect;
 
