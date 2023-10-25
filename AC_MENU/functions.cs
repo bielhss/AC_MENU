@@ -50,7 +50,7 @@ namespace AC_MENU
             var entities = new List<Entity>();
             var entityList = mem.ReadPointer(moduleBase, Offsets.iEntityList);
 
-            for (int i = 0; i < 4; i++) //adicionando a lista até 4 entidades
+            for (int i = 0; i < 32; i++) //adicionando a lista até 4 entidades
             {
                 var currentEntBase = mem.ReadPointer(entityList, i * 0x4);
                 var ent = ReadEntity(currentEntBase);

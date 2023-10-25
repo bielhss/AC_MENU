@@ -1,6 +1,6 @@
 ﻿namespace AC_MENU
 {
-    partial class Form1
+    partial class Aimbot
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,13 +30,13 @@
         {
             SuspendLayout();
             // 
-            // Form1
+            // Aimbot
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "Form1";
-            Text = "Form1";
+            ClientSize = new Size(800, 510);
+            Name = "Aimbot";
+            Text = "Aimbot";
             Load += Form1_Load;
             Paint += Form1_Paint;
             ResumeLayout(false);

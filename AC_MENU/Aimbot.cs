@@ -5,7 +5,7 @@ using ezOverLay;
 
 namespace AC_MENU
 {
-    public partial class Form1 : Form
+    public partial class Aimbot : Form
     {
         ez ez = new ez();
         methods? m;
@@ -19,7 +19,7 @@ namespace AC_MENU
         static extern short GetAsyncKeyState(Keys vKey);
 
 
-        public Form1()
+        public Aimbot()
         {
             InitializeComponent();
         }
@@ -68,7 +68,7 @@ namespace AC_MENU
 
                 }
 
-                Form1 f = this;
+                Aimbot f = this;
                 f.Refresh();
 
 
@@ -82,22 +82,22 @@ namespace AC_MENU
             Pen red = new Pen(Color.Red, 3);
             Pen green = new Pen(Color.Green, 3);
 
-            foreach(var ent in entities.ToList())
+            foreach (var ent in entities.ToList())
             {
                 var wtsFeet = m.WorldToScreen(m.ReadMatrix(), ent.feet, this.Width, this.Height);
                 var wtsHead = m.WorldToScreen(m.ReadMatrix(), ent.head, this.Width, this.Height);
 
                 if (wtsFeet.X > 0)
                 {
-                    if(localPlayer.team == ent.team)
+                    if (localPlayer.team == ent.team)
                     {
-                        g.DrawLine(green, new Point(Width/2, Height), wtsFeet);
+                        g.DrawLine(green, new Point(Width / 2, Height), wtsFeet);
                         g.DrawRectangle(green, m.CalcRect(wtsFeet, wtsHead));
 
                     }
                     else
                     {
-                        g.DrawLine(red, new Point(Width/2,Height), wtsFeet);
+                        g.DrawLine(red, new Point(Width / 2, Height), wtsFeet);
                         g.DrawRectangle(red, m.CalcRect(wtsFeet, wtsHead));
                     }
                 }
